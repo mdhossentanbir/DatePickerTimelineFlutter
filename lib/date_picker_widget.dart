@@ -219,6 +219,10 @@ class _DatePickerState extends State<DatePicker> {
         date1.month == date2.month &&
         date1.year == date2.year;
   }
+
+  void setStateMethod(){
+    setState((){});
+  }
 }
 
 class DatePickerController {
@@ -276,6 +280,7 @@ class DatePickerController {
         Duration(days: _datePickerState!.widget.daysCount))) <= 0) {
       // date is in the range
       _datePickerState!._currentDate = date;
+      _datePickerState!.setStateMethod();
     }
   }
 
